@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <meta id='theThemeColor' name='theme-color' content='#4169e1' >
+  <meta name="description" content="DataURL Manifest Test" >
+
+  <link id='theFavicon' rel='icon' type='image/png' href='/favicon.png' >
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120.png" >
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180.png" >
+  <meta name="mobile-web-app-capable" content="yes" >
+  <meta name="apple-mobile-web-app-title" content="DataURL Manifest Test" >
+  <meta name="apple-mobile-web-app-status-bar-style" content="white" >
+</head>
+<body>
+<h1>Test with <code>dataurl</code></h1>
+<script>
+const manifest = JSON.stringify({
+  "background_color": "#ffffff",
+  "theme_color": "#4169e1",
+  "name": "Manifest DataURL test",
+  "short_name": "Manifest DataUR",
+  "description": "Manifest DataURL test",
+  "display": "standalone",
+  "start_url": "/manifest-dataurl/?pwa=true",
+  "icons": [
+    {
+      "src": "icon-48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-44.png",
+      "sizes": "44x44",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-50.png",
+      "sizes": "50x50",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-150.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    }
+  ]
+})
+document.head.insertAdjacentHTML('beforeend', `<link rel='manifest' href='data:application/manifest+json;base64,${btoa(manifest)}' >`)
+</script>
+<script>
+  navigator.serviceWorker.register("./service-worker.js").then(
+    sw => console.log(sw)
+  )
+</script>
+
+</body>
+</html>
