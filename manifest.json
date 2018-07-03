@@ -8,47 +8,47 @@
   "start_url": "/manifest-dataurl/?pwa=true",
   "icons": [
     {
-      "src": "icon-48.png",
+      "src": "/manifest-dataurl/icon-48.png",
       "sizes": "48x48",
       "type": "image/png"
     },
     {
-      "src": "icon-72.png",
+      "src": "/manifest-dataurl/icon-72.png",
       "sizes": "72x72",
       "type": "image/png"
     },
     {
-      "src": "icon-96.png",
+      "src": "/manifest-dataurl/icon-96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "icon-144.png",
+      "src": "/manifest-dataurl/icon-144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "icon-192.png",
+      "src": "/manifest-dataurl/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icon-512.png",
+      "src": "/manifest-dataurl/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "icon-44.png",
+      "src": "/manifest-dataurl/icon-44.png",
       "sizes": "44x44",
       "type": "image/png"
     },
     {
-      "src": "icon-50.png",
+      "src": "/manifest-dataurl/icon-50.png",
       "sizes": "50x50",
       "type": "image/png"
     },
     {
-      "src": "icon-150.png",
+      "src": "/manifest-dataurl/icon-150.png",
       "sizes": "150x150",
       "type": "image/png"
     }
