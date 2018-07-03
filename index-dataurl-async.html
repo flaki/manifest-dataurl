@@ -14,7 +14,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="white" >
 </head>
 <body>
-<h1>Test with dynamic <code>dataurl</code>s</h1>
+<h1>Test with <code>dataurl</code>s, delayed 3s</h1>
 <script>
 /* load & set asynchronously with a few seconds of delay */
 setTimeout(() => {
@@ -75,13 +75,11 @@ const manifest = JSON.stringify({
   ]
 })
 document.head.insertAdjacentHTML('beforeend', `<link rel='manifest' href='data:application/manifest+json;base64,${btoa(manifest)}' >`)
-}, 3000)
-</script>
 
-<script>
-  navigator.serviceWorker.register("./service-worker.js").then(
-    sw => console.log(sw)
-  )
+navigator.serviceWorker.register("./service-worker.js").then(
+  sw => console.log(sw)
+)
+}, 3000)
 </script>
 
 </body>
